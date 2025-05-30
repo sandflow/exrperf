@@ -4,6 +4,8 @@ project (exrperf)
 
 find_package(Threads REQUIRED)
 
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
+
 add_subdirectory(ext/openexr)
 add_executable(exrperf src/main/cpp/main.cpp)
 target_include_directories(exrperf PRIVATE ext/cxxopts)
